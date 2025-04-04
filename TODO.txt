@@ -1,0 +1,30 @@
+TODO LIST
+
+- preview image: metti tasto "reset a 0"; metti il campo step; metti i valori di default non zero.
+- preview image: premendo cancel non deve dare errore
+- regexp con relativo checkbox
+- campo to: metti numero e data formattata
+- CTRL+1 fino a CTRL+9: binding 9 search and replace
+- salva e carica regexp
+- togliere data di scadenza
+- PREVIEW and UNDO buttons
+- timer = 0 (no timer) by default
+- portable mode (cfg file) must not be the default
+- free music download
+- regexp + tags: ^.{0,}$ (replace the whole line)
+- binding con CTRL+ALT quando sono nel testo
+- TAG: aggiungere ##CAPTURED# text 
+- trailing zeros
+- UNDO
+- inserire numer di revisione
+- F1 = apre l'help con le espressioni regolari.
+-highlight in red on statusbar the modifications in preview
+- recursive GROUP in settings: contains:
+-- separator
+--currentIndex = 0 (default)
+--texts, separato by the separator
+--executable called with "-r" option do not show gui but places in clipboard the next text and increment the currentIndex
+--when currentIndex>size restart recursion.
+
+-Upper or lower case only to selected text.
+- in the settings: DATA FORMAT i.e. DateFormat = "AAAA-MM-DD". Aggiungere relativo tasto

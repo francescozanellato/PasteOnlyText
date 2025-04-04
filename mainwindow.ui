@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>731</width>
+    <height>593</height>
+   </rect>
+  </property>
+  <property name="focusPolicy">
+   <enum>Qt::FocusPolicy::ClickFocus</enum>
+  </property>
+  <property name="acceptDrops">
+   <bool>true</bool>
+  </property>
+  <property name="windowTitle">
+   <string>PasteOnlyText</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>5</number>
+    </property>
+    <property name="topMargin">
+     <number>5</number>
+    </property>
+    <property name="rightMargin">
+     <number>5</number>
+    </property>
+    <property name="bottomMargin">
+     <number>5</number>
+    </property>
+    <property name="spacing">
+     <number>3</number>
+    </property>
+    <item row="3" column="0" colspan="3">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QCheckBox" name="useRegexp">
+        <property name="toolTip">
+         <string>Use regular expressions</string>
+        </property>
+        <property name="text">
+         <string>Regexp</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Replace the following text in file name...</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0" colspan="8">
+     <widget class="QTextBrowser" name="text">
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="2">
+     <widget class="QPushButton" name="swap">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>40</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>&lt;-&gt;</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="0" colspan="2">
+     <widget class="QComboBox" name="replaceEdit">
+      <property name="editable">
+       <bool>true</bool>
+      </property>
+      <property name="currentText">
+       <string/>
+      </property>
+      <property name="currentIndex">
+       <number>-1</number>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0" colspan="3">
+     <widget class="QComboBox" name="macros">
+      <property name="editable">
+       <bool>true</bool>
+      </property>
+      <property name="currentText">
+       <string/>
+      </property>
+      <property name="currentIndex">
+       <number>-1</number>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="0" colspan="7">
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QPushButton" name="replaceInText_b">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Replace in text (Ctrl+R)</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="preview">
+        <property name="text">
+         <string>Preview modifications</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="apply_b">
+        <property name="text">
+         <string>Apply modifications</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="undo_b">
+        <property name="toolTip">
+         <string>Undo text replacement CTRL+Z</string>
+        </property>
+        <property name="text">
+         <string>Undo modifications (Ctrl+Z)</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Orientation::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item row="3" column="3" colspan="4">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="Line" name="line">
+        <property name="orientation">
+         <enum>Qt::Orientation::Vertical</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>... with this:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="reset">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>Reset to Defaults</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="useNewline">
+        <property name="toolTip">
+         <string>Replace \n with newline and \t with tab.</string>
+        </property>
+        <property name="text">
+         <string>\n \t</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="useTags">
+        <property name="toolTip">
+         <string>Include tags for batch renaming:
+##NUMBER#: placeholder for a progressive number
+##DATE#: placeholder for the current date (YYYY-MM-DD)</string>
+        </property>
+        <property name="text">
+         <string>Tags</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="3">
+     <widget class="QPushButton" name="runMacro_b">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="text">
+       <string>Run macro</string>
+      </property>
+     </widget>
+    </item>
+    <item row="4" column="3" colspan="4">
+     <widget class="QComboBox" name="replaceWithEdit">
+      <property name="editable">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="4">
+     <widget class="QCheckBox" name="saveStrings">
+      <property name="toolTip">
+       <string>Save replace strings on exit</string>
+      </property>
+      <property name="text">
+       <string>Save Settings on exit</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>731</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionSaveImage"/>
+    <addaction name="actionSettings"/>
+    <addaction name="actionOpenImageDirOnExit"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuTools">
+    <property name="title">
+     <string>Tools</string>
+    </property>
+    <addaction name="actionAllUppercase"/>
+    <addaction name="actionAllLowercase"/>
+    <addaction name="actionAllInitialsUppercase"/>
+    <addaction name="actionOnlyInitialsUppercase"/>
+    <addaction name="actionFirst_uppercase_other_lowercase"/>
+    <addaction name="actionResetCase"/>
+    <addaction name="actionStopTimer"/>
+    <addaction name="actionRimuovi1"/>
+    <addaction name="actionReplaceInText"/>
+    <addaction name="actionCopyFolders"/>
+    <addaction name="actionCopyFoldersRecursively"/>
+    <addaction name="actionCopyUrlsToClipboard"/>
+    <addaction name="actionCreateEmailWithLink"/>
+    <addaction name="actionCropImage"/>
+    <addaction name="actionCropImageWithPreview"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionLicense"/>
+    <addaction name="actionRegular_expressions"/>
+    <addaction name="actionAboutQt"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionUndo"/>
+    <addaction name="actionRedo"/>
+    <addaction name="actionApply_modifications"/>
+    <addaction name="actionEditText"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuTools"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionStopTimer"/>
+   <addaction name="actionUndo"/>
+   <addaction name="actionRedo"/>
+   <addaction name="actionRimuovi1"/>
+   <addaction name="actionOpenImageDirOnExit"/>
+   <addaction name="actionCopyUrlsToClipboard"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+   <property name="shortcut">
+    <string>Esc</string>
+   </property>
+  </action>
+  <action name="actionAllUppercase">
+   <property name="text">
+    <string>ALL UPPERCASE</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+A</string>
+   </property>
+  </action>
+  <action name="actionAllLowercase">
+   <property name="text">
+    <string>all lowercase</string>
+   </property>
+   <property name="shortcut">
+    <string>Z</string>
+   </property>
+  </action>
+  <action name="actionAllInitialsUppercase">
+   <property name="text">
+    <string>All Initials Uppercase</string>
+   </property>
+   <property name="toolTip">
+    <string>All Initials Uppercase</string>
+   </property>
+   <property name="shortcut">
+    <string>X</string>
+   </property>
+  </action>
+  <action name="actionResetCase">
+   <property name="text">
+    <string>Reset Original Case</string>
+   </property>
+   <property name="shortcut">
+    <string>S</string>
+   </property>
+  </action>
+  <action name="actionStopTimer">
+   <property name="text">
+    <string>Stop Timer (D)</string>
+   </property>
+   <property name="toolTip">
+    <string>Stop Timer (D)</string>
+   </property>
+   <property name="shortcut">
+    <string>D</string>
+   </property>
+  </action>
+  <action name="actionOnlyInitialsUppercase">
+   <property name="text">
+    <string>Only IniTIALs UppERcASe</string>
+   </property>
+   <property name="shortcut">
+    <string>C</string>
+   </property>
+  </action>
+  <action name="actionRimuovi1">
+   <property name="text">
+    <string>Rename Files (R)</string>
+   </property>
+   <property name="toolTip">
+    <string>Rimuovi (1) nel nome file</string>
+   </property>
+   <property name="shortcut">
+    <string>R</string>
+   </property>
+  </action>
+  <action name="actionCopyFoldersRecursively">
+   <property name="text">
+    <string>Copy folders recursively</string>
+   </property>
+   <property name="toolTip">
+    <string>Copy selected folders recursively (no files)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+C</string>
+   </property>
+  </action>
+  <action name="actionCopyFolders">
+   <property name="text">
+    <string>Copy folders</string>
+   </property>
+   <property name="toolTip">
+    <string>Copy selected folders (no files)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+Z</string>
+   </property>
+  </action>
+  <action name="actionFirst_uppercase_other_lowercase">
+   <property name="text">
+    <string>First uppercase other lowercase</string>
+   </property>
+   <property name="shortcut">
+    <string>&lt;</string>
+   </property>
+  </action>
+  <action name="actionSaveImage">
+   <property name="text">
+    <string>Save image...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionSettings">
+   <property name="text">
+    <string>Settings...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+E</string>
+   </property>
+  </action>
+  <action name="actionOpenImageDirOnExit">
+   <property name="text">
+    <string>Open image dir on exit (O)</string>
+   </property>
+   <property name="shortcut">
+    <string>O</string>
+   </property>
+  </action>
+  <action name="actionCopyUrlsToClipboard">
+   <property name="text">
+    <string>Link urls to clipboard (L)</string>
+   </property>
+   <property name="toolTip">
+    <string>Link urls to clipboard (L)</string>
+   </property>
+   <property name="shortcut">
+    <string>L</string>
+   </property>
+  </action>
+  <action name="actionCreateEmailWithLink">
+   <property name="text">
+    <string>Create email with link (M)</string>
+   </property>
+   <property name="shortcut">
+    <string>M</string>
+   </property>
+  </action>
+  <action name="actionReplaceInText">
+   <property name="text">
+    <string>Replace in text (CONTROL-R)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="actionLicense">
+   <property name="text">
+    <string>License</string>
+   </property>
+   <property name="shortcut">
+    <string>F10</string>
+   </property>
+  </action>
+  <action name="actionUndo">
+   <property name="text">
+    <string>Undo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Z</string>
+   </property>
+  </action>
+  <action name="actionApply_modifications">
+   <property name="text">
+    <string>Apply modifications</string>
+   </property>
+  </action>
+  <action name="actionRegular_expressions">
+   <property name="text">
+    <string>Regular expressions...</string>
+   </property>
+   <property name="shortcut">
+    <string>F11</string>
+   </property>
+  </action>
+  <action name="actionRedo">
+   <property name="text">
+    <string>Redo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Y</string>
+   </property>
+  </action>
+  <action name="actionCropImage">
+   <property name="text">
+    <string>Crop Image</string>
+   </property>
+   <property name="shortcut">
+    <string>Q</string>
+   </property>
+  </action>
+  <action name="actionCropImageWithPreview">
+   <property name="text">
+    <string>Preview Crop Image...</string>
+   </property>
+   <property name="shortcut">
+    <string>W</string>
+   </property>
+  </action>
+  <action name="actionEditText">
+   <property name="text">
+    <string>Edit text</string>
+   </property>
+   <property name="shortcut">
+    <string>F2</string>
+   </property>
+  </action>
+  <action name="actionAboutQt">
+   <property name="text">
+    <string>About Qt...</string>
+   </property>
+   <property name="shortcut">
+    <string>F12</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>text</tabstop>
+  <tabstop>useRegexp</tabstop>
+  <tabstop>reset</tabstop>
+  <tabstop>useTags</tabstop>
+  <tabstop>replaceEdit</tabstop>
+  <tabstop>replaceWithEdit</tabstop>
+  <tabstop>swap</tabstop>
+  <tabstop>replaceInText_b</tabstop>
+  <tabstop>preview</tabstop>
+  <tabstop>apply_b</tabstop>
+  <tabstop>undo_b</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
