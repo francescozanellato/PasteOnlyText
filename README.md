@@ -43,3 +43,25 @@ Example Usage (sh):
 ./PasteOnlyText -progressive
 
 This option allows the PasteOnlyText application to automate the process of pasting predefined text snippets from a list to the clipboard in a sequential manner.
+
+By modifying the PasteOnlyText.cfg file (located in the same folder of the executable file), you can set up your own text snippets and configure other options to enhance your clipboard management and automation experience.
+
+Examples:
+## Configuration
+
+PasteOnlyText allows you to configure various options through the `PasteOnlyText.cfg` configuration file. This file lets you customize different settings to tailor the application's behavior to your needs.
+
+## Configuration
+
+PasteOnlyText allows you to configure various options through the `PasteOnlyText.cfg` configuration file. This file lets you customize different settings to tailor the application's behavior to your needs.
+
+### Example Configuration
+
+```ini
+[ProgressiveText]
+# List of text snippets for progressive pasting
+textList = Example1;;Example2;;Example3
+
+[General]
+# Index for progressive pasting
+imageNumber = 0
