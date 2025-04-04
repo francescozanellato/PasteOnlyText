@@ -29,3 +29,17 @@ The PasteOnlyText project is a tool designed to perform various actions on the t
     Integration: It integrates seamlessly with other applications and tools, enabling efficient text handling across different platforms.
 
 The project is primarily written in C++ and utilizes QMake for building and project management. Its user interface and functionalities are designed to enhance productivity when dealing with clipboard text content.
+
+The main.cpp file for the PasteOnlyText project includes a command-line option to run the application in a non-interactive mode for progressive pasting to the clipboard. Here are the command-line options:
+
+    -progressive: Enables non-interactive mode for progressive pasting to the clipboard.
+        When this option is used, the application will read the ProgressiveText setting from the PasteOnlyText.cfg configuration file.
+        It will paste the next item from the ProgressiveText list to the clipboard.
+        If the ProgressiveText setting is empty, a default list (Example1;;Example2;;Example3) will be created in the configuration file.
+        The imageNumber setting in the configuration file is used to keep track of the current index for progressive pasting.
+
+Example Usage (sh):
+
+./PasteOnlyText -progressive
+
+This option allows the PasteOnlyText application to automate the process of pasting predefined text snippets from a list to the clipboard in a sequential manner.
