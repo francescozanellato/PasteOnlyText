@@ -1,7 +1,6 @@
 # PasteOnlyText
 PasteOnlyText lets you perform many actions on the text/content copied in your clipboard.
 
-<!--
     Author: Francesco Paolo Luca Zanellato
     Copyright (C) 2025 Francesco Paolo Luca Zanellato
 
@@ -17,4 +16,4 @@ PasteOnlyText lets you perform many actions on the text/content copied in your c
 
     You should have received a copy of the GNU General Public License
     along with this program. If not, see <https://www.gnu.org/licenses/>.
--->
+
