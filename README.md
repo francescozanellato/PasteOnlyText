@@ -17,3 +17,15 @@ PasteOnlyText lets you perform many actions on the text/content copied in your c
     You should have received a copy of the GNU General Public License
     along with this program. If not, see <https://www.gnu.org/licenses/>.
 
+
+The PasteOnlyText project is a tool designed to perform various actions on the text or content that is copied to your clipboard. Here are some key features and functionalities:
+
+    Clipboard Management: It allows you to manage and manipulate the text content within your clipboard, making it easier to work with copied data.
+
+    Text Processing: You can perform several text processing actions such as trimming, formatting, and converting text to different cases.
+
+    Automation: The project can automate repetitive tasks involving text content, saving time and effort.
+
+    Integration: It integrates seamlessly with other applications and tools, enabling efficient text handling across different platforms.
+
+The project is primarily written in C++ and utilizes QMake for building and project management. Its user interface and functionalities are designed to enhance productivity when dealing with clipboard text content.
