@@ -64,7 +64,7 @@ imageNumber = 0
 
 
 
-# Compiling:
+# Compiling
 
 Install Qt and QMake:
 
