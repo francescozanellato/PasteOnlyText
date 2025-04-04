@@ -65,3 +65,29 @@ textList = Example1;;Example2;;Example3
 [General]
 # Index for progressive pasting
 imageNumber = 0
+
+
+
+# COMPILING:
+
+Install Qt and QMake:
+
+    Ensure that you have Qt and QMake installed on your system. You can download and install Qt from the Qt official website.
+
+Clone the Repository:
+
+git clone https://github.com/francescozanellato/PasteOnlyText.git
+cd PasteOnlyText
+
+Generate Makefile using QMake:
+
+qmake
+
+Compile the Project:
+
+make
+
+Run the Application:
+
+./PasteOnlyText
+
