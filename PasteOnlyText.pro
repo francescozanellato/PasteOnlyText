@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 #*
-#* Author: Francesco Zanellato
+#* Author: Francesco Paolo Luca Zanellato
 #* Copyright (C) 2015-2025 Francesco Zanellato
 #*
 #* This program is free software: you can redistribute it and/or modify
