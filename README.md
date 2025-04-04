@@ -46,11 +46,6 @@ This option allows the PasteOnlyText application to automate the process of past
 
 By modifying the PasteOnlyText.cfg file (located in the same folder of the executable file), you can set up your own text snippets and configure other options to enhance your clipboard management and automation experience.
 
-Examples:
-## Configuration
-
-PasteOnlyText allows you to configure various options through the `PasteOnlyText.cfg` configuration file. This file lets you customize different settings to tailor the application's behavior to your needs.
-
 ## Configuration
 
 PasteOnlyText allows you to configure various options through the `PasteOnlyText.cfg` configuration file. This file lets you customize different settings to tailor the application's behavior to your needs.
@@ -68,7 +63,7 @@ imageNumber = 0
 
 
 
-# COMPILING:
+# Compiling:
 
 Install Qt and QMake:
 
