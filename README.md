@@ -62,8 +62,7 @@ textList = Example1;;Example2;;Example3
 imageNumber = 0
 
 
-
-# Compiling:
+#### Compiling:
 
 Install Qt and QMake:
 
