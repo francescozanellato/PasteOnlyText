@@ -46,11 +46,11 @@ This option allows the PasteOnlyText application to automate the process of past
 
 By modifying the PasteOnlyText.cfg file (located in the same folder of the executable file), you can set up your own text snippets and configure other options to enhance your clipboard management and automation experience.
 
-## Configuration
+# Configuration
 
 PasteOnlyText allows you to configure various options through the `PasteOnlyText.cfg` configuration file. This file lets you customize different settings to tailor the application's behavior to your needs.
 
-### Example Configuration
+Example Configuration
 
 ```ini
 [ProgressiveText]
@@ -60,28 +60,26 @@ textList = Example1;;Example2;;Example3
 [General]
 # Index for progressive pasting
 imageNumber = 0
+```
 
 
-#### Compiling:
+
+# Compiling:
 
 Install Qt and QMake:
 
     Ensure that you have Qt and QMake installed on your system. You can download and install Qt from the Qt official website.
 
 Clone the Repository:
-
-git clone https://github.com/francescozanellato/PasteOnlyText.git
-cd PasteOnlyText
+    git clone https://github.com/francescozanellato/PasteOnlyText.git
+    cd PasteOnlyText
 
 Generate Makefile using QMake:
-
-qmake
+    qmake
 
 Compile the Project:
-
-make
+    make
 
 Run the Application:
-
-./PasteOnlyText
+    ./PasteOnlyText
 
