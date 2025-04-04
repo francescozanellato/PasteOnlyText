@@ -5,7 +5,7 @@
 #-------------------------------------------------
 #*
 #* Author: Francesco Paolo Luca Zanellato
-#* Copyright (C) 2015-2025 Francesco Zanellato
+#* Copyright (C) 2015-2025 Francesco Paolo Luca Zanellato
 #*
 #* This program is free software: you can redistribute it and/or modify
 #* it under the terms of the GNU General Public License as published by
