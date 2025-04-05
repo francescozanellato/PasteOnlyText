@@ -44,3 +44,16 @@ FORMS    += mainwindow.ui \
 RC_ICONS = icon.ico
 
 QMAKE_APPLE_DEVICE_ARCHS = x86_64 x86_64h arm64
+
+
+CONFIG(debug, debug|release) {
+    DESTDIR = $${PWD}/build/debug
+} else {
+    DESTDIR = $${PWD}/release
+}
+
+COPIES += vbsStartupFile
+vbsStartupFile.files = $$files($${PWD}/*.vbs)
+vbsStartupFile.path = $${PWD}/release
+
+
