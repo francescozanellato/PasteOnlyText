@@ -94,7 +94,7 @@ Clone the Repository, build the project, run and deploy the application:
     cd /mingw64/bin/deploy/PasteOnlyText/
     windeployqt6 --plugindir ./share/qt6/plugins ./PasteOnlyText.exe
     explorer.exe /select,"C:\\msys64\\mingw64\\bin\\deploy\\PasteOnlyText\\PasteOnlyText.exe"
-    /mingw64/bin/deploy/PasteOnlyText/PasteOnlyText.exe
+    /mingw64/bin/deploy/PasteOnlyText/PasteOnlyText.exe &
     exit
 
 
