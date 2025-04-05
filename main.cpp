@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
     if (arguments.size() > 1 && arguments.at(1)=="-progressive")
     { //Non-interactive mode. Progressive paste to clipboard
         //qDebug("Non-interactive mode. Progressive paste to clipboard...");
-        QSettings *settings = new QSettings(ab.applicationDirPath()+"/PasteOnlyText.cfg",QSettings::IniFormat,0);
+        QSettings *settings = new QSettings(ab.applicationDirPath()+"/PasteOnlyText.txt",QSettings::IniFormat,0);
 
         QString replaceTextListSeparator = settings->value("ReplaceTextListSeparator",+";;").toString();
         QString progressiveText = settings->value("ProgressiveText","").toString();
