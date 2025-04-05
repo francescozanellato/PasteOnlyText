@@ -112,7 +112,7 @@ Double click the link to open the program.
 
 
 
-# Compiling (Alternative for all operating systems):
+# Compiling (alternative method for all operating systems):
 
 
 # Compiling
