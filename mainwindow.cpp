@@ -37,7 +37,7 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
-    QString cfgFile = QCoreApplication::applicationDirPath()+"/PasteOnlyText.cfg";
+    QString cfgFile = QCoreApplication::applicationDirPath()+"/PasteOnlyText.txt";
     settings = new QSettings(cfgFile,QSettings::IniFormat,this);
     loadSettings();
     ui->setupUi(this);
@@ -463,7 +463,7 @@ int MainWindow::getImageNumber()
 
 void MainWindow::doOpenSettings()
 {
-    QDesktopServices::openUrl(QUrl::fromLocalFile(QCoreApplication::applicationDirPath()+"/PasteOnlyText.cfg"));
+    QDesktopServices::openUrl(QUrl::fromLocalFile(QCoreApplication::applicationDirPath()+"/PasteOnlyText.txt"));
 }
 
 void MainWindow::doOpenImageDirOnExit()
@@ -511,7 +511,7 @@ void MainWindow::loadSettings()
     timer_ms = settings->value("EnableTimer_ms",0).toInt();
     imageNumber = settings->value("imageNumber",1).toInt();
     imageNumberDigits = settings->value("imageNumberDigits",3).toInt();
-    imagePath = settings->value("imagePath",QCoreApplication::applicationDirPath()).toString()+"/Images";
+    imagePath = settings->value("imagePath",QCoreApplication::applicationDirPath()+"/Images").toString();
     QDir tempImageDir = QDir(imagePath);
     if (!tempImageDir.exists()) tempImageDir.mkdir(imagePath);
     imageFilename = settings->value("imageFilename","image").toString();
