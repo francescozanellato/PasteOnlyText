@@ -102,7 +102,10 @@ Clone the Repository, build the project, run and deploy the application:
     /mingw64/bin/deploy/PasteOnlyText/PasteOnlyText.exe &
     exit
 
-Create a new link on the Desktop, the link must be pointing to the file "C:/msys64/mingw64/bin/deploy/PasteOnlyText/PasteOnlyText.vbs"
+In Windows, create the program shortcut on the Desktop, pointing to the following path:
+
+    "C:\msys64\mingw64\bin\deploy\PasteOnlyText\PasteOnlyText.vbs"
+
 Double click the link to open the program.
 
 
