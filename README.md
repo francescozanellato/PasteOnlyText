@@ -63,6 +63,57 @@ imageNumber = 0
 ```
 
 
+# Compiling (recommended method on Windows):
+
+Install MSYS2, following the instructions at the following link:
+
+https://www.msys2.org/wiki/MSYS2-installation/
+
+Run MSYS2 (Mingw64 environment):
+
+    C:\msys64\mingw64.exe
+
+Install Qt package and all the development tools with the following commands inside MSYS2 (Mingw64 environment):
+
+    pacman -S mingw-w64-x86_64-qt6
+    pacman -S mingw-w64-x86_64-make
+    pacman -S git
+    pacman -S mingw-w64-x86_64-gcc
+
+Clone the Repository:
+
+    git clone https://github.com/francescozanellato/PasteOnlyText.git
+    cd PasteOnlyText
+
+Generate Makefile using QMake:
+
+    qmake6
+
+Compile the Project:
+
+mingw32-make.exe
+
+Run the Application:
+
+    ./release/PasteOnlyText
+
+copy the executable in the "bin" folder (along with the required dll to run the software):
+
+    cp ./release/PasteOnlyText.exe /mingw64/bin/
+
+    exit
+
+
+In Windows, create the program shortcut on the Desktop, pointing to the following path:
+
+    "C:\msys64\mingw64\bin\PasteOnlyText.exe"
+
+Double click the link to open the program.
+
+
+
+# Compiling (Alternative for all operating systems):
+
 
 # Compiling
 
