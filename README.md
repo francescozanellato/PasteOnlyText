@@ -38,7 +38,7 @@ The main.cpp file for the PasteOnlyText project includes a command-line option t
         If the ProgressiveText setting is empty, a default list (Example1;;Example2;;Example3) will be created in the configuration file.
         The imageNumber setting in the configuration file is used to keep track of the current index for progressive pasting.
 
-Example Usage (sh):
+Example Usage (from commandline/bash environment):
 
     ./PasteOnlyText -progressive
 
