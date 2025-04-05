@@ -32,7 +32,6 @@
 #include <QFileDialog>
 #include <qmath.h>
 #include <QTextStream>
-QByteArray LICENSED_TO = "0000001e789c8b72f473f5f1710cf157700b72f473760d76f6570870f4f7f157f0097576040081fb083f"; //qDebug(qCompress("ZANELLATO FRANCESCO PAOLO LUCA").toHex());
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -756,11 +755,22 @@ void MainWindow::doShowLicense()
 {
     //qDebug(qCompress("ZANELLATO FRANCESCO PAOLO LUCA").toHex());
     //qDebug(qUncompress(QByteArray::fromHex("0000001e789c8b72f473f5f1710cf157700b72f473760d76f6570870f4f7f157f0097576040081fb083f")));
-    QMessageBox::information(this,"License","Copyright (C) 2014-2024 Francesco Zanellato.\nAll rights reserved.\n\n" // updated from 2016 to 2024
-                                              "This program is licensed for use to:\n"
-                                                  +qUncompress(QByteArray::fromHex(LICENSED_TO))+"\n"
-                                              "Please do not distribute this software\n"
-                                              "without written consent from the author.");
+    QMessageBox::information(this,"License",
+                             "Copyright (C) 2015-2025 Francesco Paolo Luca Zanellato\n"
+                             "\n"
+                             "This program is free software: you can redistribute it and/or modify\n"
+                             "it under the terms of the GNU General Public License as published by\n"
+                             "the Free Software Foundation, either version 3 of the License, or\n"
+                             "(at your option) any later version.\n"
+                             "\n"
+                             "This program is distributed in the hope that it will be useful,\n"
+                             "but WITHOUT ANY WARRANTY; without even the implied warranty of\n"
+                             "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the\n"
+                             "GNU General Public License for more details.\n"
+                             "\n"
+                             "You should have received a copy of the GNU General Public License\n"
+                             "along with this program. If not, see <https://www.gnu.org/licenses/>."
+                             );
 }
 
 void MainWindow::showAboutQt()
@@ -896,7 +906,7 @@ void MainWindow::initialsUppercase(bool firstLowerCase = true)
             currChar.isSpace()
             ) {
             currentText.replace(i,2,QString(currentText.at(i))
-                                          .append(currentText.at(i+1).toUpper()));
+                                    .append(currentText.at(i+1).toUpper()));
         }
     }
 
