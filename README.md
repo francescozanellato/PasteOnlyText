@@ -87,8 +87,14 @@ Clone the Repository, build the project, run and deploy the application:
     qmake6
     mingw32-make.exe
     ./release/PasteOnlyText
-    cp ./release/PasteOnlyText.exe /mingw64/bin/
-    explorer.exe /select,"C:\\msys64\\mingw64\\bin\\PasteOnlyText.exe"
+    mkdir /mingw64/bin/deploy
+    mkdir /mingw64/bin/deploy/PasteOnlyText
+    cp ./release/PasteOnlyText.exe /mingw64/bin/deploy/PasteOnlyText/
+    cd /mingw64/bin/
+    cp ./D3Dcompiler_47.dll ./zlib1.dll ./libb2-1.dll ./libbrotlicommon.dll ./libbrotlidec.dll ./libbz2-1.dll ./libdouble-conversion.dll ./libfreetype-6.dll ./libgcc_s_seh-1.dll ./libglib-2.0-0.dll ./libgraphite2.dll ./libharfbuzz-0.dll ./libiconv-2.dll ./libicudt76.dll ./libicuin76.dll ./libicuuc76.dll ./libintl-8.dll ./libmd4c.dll ./libpcre2-8-0.dll ./libpcre2-16-0.dll ./libpng16-16.dll ./libstdc++-6.dll ./libwinpthread-1.dll ./libzstd.dll /mingw64/bin/deploy/PasteOnlyText/
+    cd /mingw64/bin/deploy/PasteOnlyText/
+    windeployqt6 --plugindir ./share/qt6/plugins ./PasteOnlyText.exe
+    explorer.exe /select,"C:\\msys64\\mingw64\\bin\\deploy\\PasteOnlyText.exe"
     exit
 
 
