@@ -40,7 +40,7 @@ The main.cpp file for the PasteOnlyText project includes a command-line option t
 
 Example Usage (sh):
 
-./PasteOnlyText -progressive
+    ./PasteOnlyText -progressive
 
 This option allows the PasteOnlyText application to automate the process of pasting predefined text snippets from a list to the clipboard in a sequential manner.
 
