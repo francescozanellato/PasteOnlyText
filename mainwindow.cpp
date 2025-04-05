@@ -511,7 +511,9 @@ void MainWindow::loadSettings()
     timer_ms = settings->value("EnableTimer_ms",0).toInt();
     imageNumber = settings->value("imageNumber",1).toInt();
     imageNumberDigits = settings->value("imageNumberDigits",3).toInt();
-    imagePath = settings->value("imagePath",QCoreApplication::applicationDirPath()).toString();
+    imagePath = settings->value("imagePath",QCoreApplication::applicationDirPath()).toString()+"/Images";
+    QDir tempImageDir = QDir(imagePath);
+    if (!tempImageDir.exists()) tempImageDir.mkdir(imagePath);
     imageFilename = settings->value("imageFilename","image").toString();
     imageExtension = settings->value("imageExtension",+"png").toString();
     cropRight = settings->value("cropRight",10).toInt();
