@@ -27,7 +27,7 @@ Perform many actions on text (like all UPPERCASE or all lowercase) and images:
 
 ![Senza titolo2](https://github.com/user-attachments/assets/0c7c6287-ed51-4361-93d2-dc7027b2aa59)
 
-Crop an image in memory and save it a single click:
+Crop an image in memory and save it with a single click:
 
 ![immagine](https://github.com/user-attachments/assets/627b76cb-9c35-43b3-b364-9c3c51c69fde)
 
