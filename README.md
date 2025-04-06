@@ -20,10 +20,16 @@ PasteOnlyText lets you perform many actions on the text/content copied in your c
 # Features
 
 Explore the text of your clipboard:
+
 ![immagine](https://github.com/user-attachments/assets/987feecd-0385-4f5f-8cb5-12d0448bfb54)
 
-Perform many actions on text (like all UPPERCASE or all lowercase) and images (fast cropping in the image in memory and saving):
+Perform many actions on text (like all UPPERCASE or all lowercase) and images:
+
 ![Senza titolo2](https://github.com/user-attachments/assets/0c7c6287-ed51-4361-93d2-dc7027b2aa59)
+
+Crop an image in memory and save it a single click:
+
+![immagine](https://github.com/user-attachments/assets/627b76cb-9c35-43b3-b364-9c3c51c69fde)
 
 
 The PasteOnlyText project is a tool designed to perform various actions on the text or content that is copied to your clipboard. Here are some key features and functionalities:
