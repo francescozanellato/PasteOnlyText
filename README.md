@@ -61,11 +61,11 @@ This option allows the PasteOnlyText application to automate the process of past
 By modifying the PasteOnlyText.cfg file (located in the same folder of the executable file), you can set up your own text snippets and configure other options to enhance your clipboard management and automation experience.
 
 # Works with AutoHotKey v2
-You can install AutoHotKey v.2 (https://www.autohotkey.com/) and configure a keyboard shortcut to open PasteOnlyText, using the following script in AutoHotKey (shortcut WIN+CTRL+ALT+C):
+You can install AutoHotKey v2 (https://www.autohotkey.com/) and configure a keyboard shortcut to open PasteOnlyText, using the following script in AutoHotKey (shortcut WIN+CTRL+ALT+C):
 
 ```
  ^#!c::
-{ ; V1toV2: Added bracket
+{
 if WinExist("PasteOnlyText")
 {
     WinActivate()
@@ -78,6 +78,33 @@ else
     WinActivate()
     Return
 }
+```
+You can automatically insert some favourite texts in the clipboard with the following AutoHotKey script (bound to shortcut WIN+CTRL+C):
+
+```
+^#c::
+{
+Run "C:\PortableApps\\PasteOnlyText\PasteOnlyText.exe -progressive"
+Return
+}
+```
+
+The favourite texts can be configured in the configuration file "C:\PortableApps\\PasteOnlyText\PasteOnlyText.txt", changing the following variable:
+
+```
+ProgressiveText="First text;;Second text"
+```
+
+The texts are separated, in the above example, with ";;" and each time you call "PasteOnlyText.exe -progressive", the next text will be put in the clipboard (no user interaction is needed).
+
+Automatically paste your favourite text with the following AutoHotKey script (bound to shortcut WIN+CTRL+V):
+
+```
+#^v::
+{
+RunWait("C:\PortableApps\fraz\FrazannaSoft\PasteOnlyText.exe -progressive")
+SendInput("^v")
+Return
 ```
 
 # Configuration
