@@ -112,9 +112,11 @@ In Windows, create the program shortcut on the Desktop, pointing to the followin
 
 Double click the link to open the program.
 
-If you need to move the program folder in a different location, double click on the script "PasteOnlyText.vbs" instead of on "PasteOnlyText.exe". This vbs script sets some "path" variables before running the application. Therefore, after moving the program folder, you can create a shortcut on the Desktop pointing to the following path (where "C:\PortableApps" is the nex location):
+If you need to move the program folder in a different location, double click on the script "PasteOnlyText.vbs" instead of on "PasteOnlyText.exe". This vbs script sets some "path" variables before running the application. Therefore, after moving the program folder (e.g. to C:\PortableApps_new), you can create a shortcut on the Desktop pointing to the following path (where "C:\PortableApps_new" is the new location):
 
-    "C:\PortableApps\PasteOnlyText\PasteOnlyText.vbs"
+    "C:\PortableApps_new\PasteOnlyText\PasteOnlyText.vbs"
+
+Warning: moving the program file after compiling may results in some image formats not working during the saving of the images; therefore, the /msys64/mingw64/bin folder should not been relocated and the vbs script should be used to launch the program.
 
 
 # Compiling (alternative method for all operating systems):
