@@ -31,6 +31,11 @@ Crop an image in memory and save it with a single click:
 
 ![immagine](https://github.com/user-attachments/assets/627b76cb-9c35-43b3-b364-9c3c51c69fde)
 
+Duplicate the folders structures (but without the files inside) with the "Copy folders recursively" command:
+
+![immagine](https://github.com/user-attachments/assets/8d3483dc-6c77-4d2c-ac23-fa8ea1e05a8c)
+
+
 
 The PasteOnlyText project is a tool designed to perform various actions on the text or content that is copied to your clipboard. Here are some key features and functionalities:
 
