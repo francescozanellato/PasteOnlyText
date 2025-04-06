@@ -60,6 +60,26 @@ This option allows the PasteOnlyText application to automate the process of past
 
 By modifying the PasteOnlyText.cfg file (located in the same folder of the executable file), you can set up your own text snippets and configure other options to enhance your clipboard management and automation experience.
 
+# Works with AutoHotKey v2
+You can install AutoHotKey v.2 (https://www.autohotkey.com/) and configure a keyboard shortcut to open PasteOnlyText, using the following script in AutoHotKey (shortcut WIN+CTRL+ALT+C):
+
+```
+ ^#!c::
+{ ; V1toV2: Added bracket
+if WinExist("PasteOnlyText")
+{
+    WinActivate()
+    Return
+}
+else
+{
+    Run("C:\PortableApps\PasteOnlyText\PasteOnlyText.exe")
+    WinWait("PasteOnlyText")
+    WinActivate()
+    Return
+}
+```
+
 # Configuration
 
 PasteOnlyText allows you to configure various options through the `PasteOnlyText.cfg` configuration file. This file lets you customize different settings to tailor the application's behavior to your needs.
