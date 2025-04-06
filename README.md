@@ -118,6 +118,8 @@ If you need to move the program folder in a different location, double click on 
 
 Warning: moving the program file after compiling may results in some image formats not working during the saving of the images; therefore, the /msys64/mingw64/bin folder should not been relocated and the vbs script should be used to launch the program.
 
+Note: after compiling, the folder "C:\msys64\home\fraz3\PasteOnlyText" can be removed. You can leave the folder "C:\msys64" for compiling other programs.
+
 
 # Compiling (alternative method for all operating systems):
 
