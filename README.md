@@ -85,6 +85,7 @@ Install Qt package and all the development tools with the following commands ins
     pacman -S mingw-w64-x86_64-gcc
 
 Ensure that you have access to C:\ and that you can write directories in the C:\ location.
+Also ensure that no files are present in "C:\PortableApps\PasteOnlyText\" (or that this folder does not exist), otherwise, make a backup of these files, since the below commands will overwrite the contents.
 
 Clone the Repository, build the project, run and deploy the application:
 
