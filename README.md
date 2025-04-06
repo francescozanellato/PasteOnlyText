@@ -108,11 +108,13 @@ Clone the Repository, build the project, run and deploy the application:
 
 In Windows, create the program shortcut on the Desktop, pointing to the following path:
 
-    "C:\msys64\mingw64\bin\deploy\PasteOnlyText\PasteOnlyText.vbs"
+    "C:\PortableApps\PasteOnlyText\PasteOnlyText.exe"
 
 Double click the link to open the program.
 
-If you need to move the program in a different folder, double click on the script "PasteOnlyText.vbs" instead of on "PasteOnlyText.exe". This vbs script sets some "path" variables before running the application.
+If you need to move the program folder in a different location, double click on the script "PasteOnlyText.vbs" instead of on "PasteOnlyText.exe". This vbs script sets some "path" variables before running the application. Therefore, after moving the program folder, you can create a shortcut on the Desktop pointing to the following path (where "C:\PortableApps" is the nex location):
+
+    "C:\PortableApps\PasteOnlyText\PasteOnlyText.vbs"
 
 
 # Compiling (alternative method for all operating systems):
