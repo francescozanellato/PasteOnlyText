@@ -17,7 +17,7 @@ PasteOnlyText lets you perform many actions on the text/content copied in your c
     You should have received a copy of the GNU General Public License
     along with this program. If not, see <https://www.gnu.org/licenses/>.
 
-#Features
+# Features
 
 Explore the text of your clipboard:
 ![immagine](https://github.com/user-attachments/assets/987feecd-0385-4f5f-8cb5-12d0448bfb54)
