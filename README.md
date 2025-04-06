@@ -84,24 +84,27 @@ Install Qt package and all the development tools with the following commands ins
     pacman -S git
     pacman -S mingw-w64-x86_64-gcc
 
+Ensure that you have access to C:\ and that you can write directories in the C:\ location.
+
 Clone the Repository, build the project, run and deploy the application:
 
     git clone https://github.com/francescozanellato/PasteOnlyText.git
     cd PasteOnlyText
     qmake6
     mingw32-make.exe
-    mkdir ./deploy
-    mkdir ./deploy/PasteOnlyText
-    cp ./release/PasteOnlyText.exe ./deploy/PasteOnlyText/
-    cp ./release/PasteOnlyText.vbs ./deploy/PasteOnlyText/
-    cd ./deploy/PasteOnlyText/
-    windeployqt6 --plugindir ./share/qt6/plugins ./PasteOnlyText.exe
-    find ./share/ -type f -executable | xargs ldd | grep /mingw64 | awk '{print $3}' | xargs -i cp {} ./
-    find ./ -type f -executable | xargs ldd | grep /mingw64 | awk '{print $3}' | xargs -i cp {} ./
+	export MY_PROJECT_DEPLOYMENT_PATH="/c/PortableApps/PasteOnlyText"
+	export PATH=./bin:./:$PATH
+    mkdir -p $MY_PROJECT_DEPLOYMENT_PATH
+    cp ./release/PasteOnlyText.exe $MY_PROJECT_DEPLOYMENT_PATH
+    cp ./release/PasteOnlyText.vbs $MY_PROJECT_DEPLOYMENT_PATH
+    cd $MY_PROJECT_DEPLOYMENT_PATH
+    windeployqt6 --plugindir ./share/qt6/plugins $MY_PROJECT_DEPLOYMENT_PATH/PasteOnlyText.exe
+    find $MY_PROJECT_DEPLOYMENT_PATH/share/ -type f -executable | xargs ldd | grep /mingw64 | awk '{print $3}' | xargs -i cp {} $MY_PROJECT_DEPLOYMENT_PATH/
+    find $MY_PROJECT_DEPLOYMENT_PATH/ -type f -executable | xargs ldd | grep /mingw64 | awk '{print $3}' | xargs -i cp {} $MY_PROJECT_DEPLOYMENT_PATH/
     cp /mingw64/bin/libgif-7.dll ./
     rm -f D3Dcompiler_47.dll
-    explorer.exe /select,"C:\\msys64\\mingw64\\home\\$USER\\deploy\\PasteOnlyText\\PasteOnlyText.vbs"
-    ./deploy/PasteOnlyText/PasteOnlyText/PasteOnlyText.exe &
+    explorer.exe /select,"C:\\PortableApps\\PasteOnlyText\\PasteOnlyText.vbs"
+    $MY_PROJECT_DEPLOYMENT_PATH/PasteOnlyText.exe &
 
 In Windows, create the program shortcut on the Desktop, pointing to the following path:
 
