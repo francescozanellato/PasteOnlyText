@@ -103,7 +103,7 @@ Clone the Repository, build the project, run and deploy the application:
     find $MY_PROJECT_DEPLOYMENT_PATH/ -type f -executable | xargs ldd | grep /mingw64 | awk '{print $3}' | xargs -i cp {} $MY_PROJECT_DEPLOYMENT_PATH/
     cp /mingw64/bin/libgif-7.dll ./
     rm -f D3Dcompiler_47.dll
-    explorer.exe /select,"C:\\PortableApps\\PasteOnlyText\\PasteOnlyText.vbs"
+    explorer.exe /select,"C:\\PortableApps\\PasteOnlyText\\PasteOnlyText.exe"
     $MY_PROJECT_DEPLOYMENT_PATH/PasteOnlyText.exe &
 
 In Windows, create the program shortcut on the Desktop, pointing to the following path:
@@ -112,6 +112,7 @@ In Windows, create the program shortcut on the Desktop, pointing to the followin
 
 Double click the link to open the program.
 
+If you need to move the program in a different folder, double click on the script "PasteOnlyText.vbs" instead of on "PasteOnlyText.exe". This vbs script sets some "path" variables before running the application.
 
 
 # Compiling (alternative method for all operating systems):
