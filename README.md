@@ -52,7 +52,7 @@ The project is primarily written in C++ and utilizes QMake for building and proj
 The main.cpp file for the PasteOnlyText project includes a command-line option to run the application in a non-interactive mode for progressive pasting to the clipboard. Here are the command-line options:
 
     -progressive: Enables non-interactive mode for progressive pasting to the clipboard.
-        When this option is used, the application will read the ProgressiveText setting from the PasteOnlyText.cfg configuration file.
+        When this option is used, the application will read the ProgressiveText setting from the PasteOnlyText.txt configuration file.
         It will paste the next item from the ProgressiveText list to the clipboard.
         If the ProgressiveText setting is empty, a default list (Example1;;Example2;;Example3) will be created in the configuration file.
         The imageNumber setting in the configuration file is used to keep track of the current index for progressive pasting.
