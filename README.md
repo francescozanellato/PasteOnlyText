@@ -39,13 +39,18 @@ Duplicate the folders structures (but without the files inside) with the "Copy f
 
 The PasteOnlyText project is a tool designed to perform various actions on the text or content that is copied to your clipboard. Here are some key features and functionalities:
 
-    Clipboard Management: It allows you to manage and manipulate the text content within your clipboard, making it easier to work with copied data.
+* Clipboard Management: It allows you to manage and manipulate the text content within your clipboard, making it easier to work with copied data. Examples:
+* Fast operations on texts: select any text in any application, then press CTRL+C (CMD+C on MAC) to copy the text in the clipboard, then open PasteOnlyText and click CTRL+SHIFT+A, then press ESC to exit the program. Now you can paste the text (only plain text, without formatting) back into your application: you can see that the text is now ALL UPPERCASE. Other functions are possible in addition to "ALL UPPERCASE": "all lowercase", "All Initials Uppercase", etc. Please refer to the "Tool" menu for more details
+* Press the "STAMP" key on your keyboard, then open PasteOnlyText, then press "O" in the PasteOnlyText: a folder will open showing you the new image file automatically created.
+* Press the "STAMP" key on your keyboard, then open PasteOnlyText, then press "W" in the PasteOnlyText: you will preview the image in memory and you can crop the image before automatically saving it in the "Images" folder.
+* Press CTRL+C on some selected files in you "explorer" of "finder" application, to copy them in the clipboard, then open PasteOnlyText and you can rename them in batch: use the lower part of the PasteOnlyText window (replace "" with "")
+* You can use and save custom macros to speed you the text/file replacement actions.
 
-    Text Processing: You can perform several text processing actions such as trimming, formatting, and converting text to different cases.
+* Text Processing: You can perform several text processing actions such as trimming, formatting, and converting text to different cases.
 
-    Automation: The project can automate repetitive tasks involving text content, saving time and effort.
+* Automation: The project can automate repetitive tasks involving text content, saving time and effort.
 
-    Integration: It integrates seamlessly with other applications and tools, enabling efficient text handling across different platforms.
+* Integration: It integrates seamlessly with other applications and tools, enabling efficient text handling across different platforms.
 
 The project is primarily written in C++ and utilizes QMake for building and project management. Its user interface and functionalities are designed to enhance productivity when dealing with clipboard text content.
 
