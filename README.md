@@ -2,7 +2,7 @@
 PasteOnlyText lets you perform many actions on the text/content/imges copied in your clipboard, like conversion to "All UPPERCASE", "all lower case" and fast image cropping, conversion and saving.
 
     Author: Francesco Paolo Luca Zanellato
-    Copyright (C) 2015-2025 Francesco Paolo Luca Zanellato
+    Copyright (C) 2015-2026 Francesco Paolo Luca Zanellato
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
